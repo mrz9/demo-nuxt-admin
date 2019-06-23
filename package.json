@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "cross-env env=dev nuxt",
-    "build:dev": "cross-env env=dev nuxt build && gulp build",
-    "build:pre": "cross-env env=pre nuxt build && gulp build",
-    "build:pub": "cross-env env=pub nuxt build && gulp build",
+    "build:dev": "cross-env env=dev nuxt build",
+    "build:pre": "cross-env env=pre nuxt build",
+    "build:pub": "cross-env env=pub nuxt build",
     "start:dev": "cross-env env=dev nuxt start",
     "start:pre": "cross-env env=pre nuxt start",
     "start:pub": "cross-env env=pub nuxt start"
