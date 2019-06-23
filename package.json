@@ -1,0 +1,31 @@
+{
+  "name": "demo-nuxt-admin",
+  "version": "1.0.1",
+  "description": "",
+  "author": "dayao <dayao2525@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env env=dev nuxt",
+    "build:dev": "cross-env env=dev nuxt build && gulp build",
+    "build:pre": "cross-env env=pre nuxt build && gulp build",
+    "build:pub": "cross-env env=pub nuxt build && gulp build",
+    "start:dev": "cross-env env=dev nuxt start",
+    "start:pre": "cross-env env=pre nuxt start",
+    "start:pub": "cross-env env=pub nuxt start"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/style-resources": "^0.1.2",
+    "cross-env": "^5.2.0",
+    "element-ui": "^2.8.2",
+    "nuxt": "^2.8.1",
+    "vue-i18n": "^8.10.0"
+  },
+  "devDependencies": {
+    "less": "^3.9.0",
+    "less-loader": "^4.1.0",
+    "node-sass": "^4.12.0",
+    "nodemon": "^1.18.9",
+    "sass-loader": "^7.1.0"
+  }
+}
