@@ -32,7 +32,7 @@
     <div class="right-action-bar">
       <a href="javascript:;" class="user-box nav-item">
         <img src="~/assets/img/user.png">
-        <span>Daisy-乐马会员1112308</span>
+        <span>MRZ</span>
       </a>
       <a href="javascript:;" class="header-item" @click="toggleMessageCenter">
         <i class="iconfont icon-message"></i>

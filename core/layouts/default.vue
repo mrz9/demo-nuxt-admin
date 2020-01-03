@@ -12,8 +12,14 @@
       </div>
       <div class="call-main-content">
         <nuxt/>
+
+        <div class="gov">
+          <span>© 2020 lafengo.com</span>
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=19073023" target="_blank" ga_event="click_about"><img src="//s3.pstatp.com/toutiao/static/img/gongan.d0289dc.png">&nbsp;粤ICP备19073023号</a>
+        </div>
       </div>
     </div>
+    
     <transition name="fold">
       <MessageCenter v-if="show_message_center"/>
     </transition>
@@ -80,17 +86,32 @@ export default {
     display: flex;
     flex:1;
     width:100%;
+    overflow: hidden;
     .call-main-nav {
       height:100%;
     }
     .call-main-content {
       display: block;
       flex:1;
-      padding:20px;
+      padding:20px 20px 0 20px;
       height: 100%;
       overflow: auto;
       -webkit-overflow-scrolling: touch;
     }
+  }
+}
+
+.gov {
+  padding: 10px;
+  &, &>a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:#999;
+  }
+  
+  span {
+    margin-right: 20px;
   }
 }
 .fold-enter-active {
