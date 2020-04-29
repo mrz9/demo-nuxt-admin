@@ -9,14 +9,14 @@
     <div class="call-main-body">
       <div class="call-main-nav">
         <MainNav />
+        <div class="gov">
+          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=19073023" target="_blank" ga_event="click_about"><img src="//s3.pstatp.com/toutiao/static/img/gongan.d0289dc.png">&nbsp;粤ICP备19073023号</a>
+          <a href="http://www.beian.miit.gov.cn" target="_blank" ga_event="click_about"><img src="//s3.pstatp.com/toutiao/static/img/gongan.d0289dc.png">&nbsp;粤ICP备19073023号-1</a>
+          <span>© 2020 lafengo.com</span>
+        </div>
       </div>
       <div class="call-main-content">
         <nuxt/>
-
-        <div class="gov">
-          <span>© 2020 lafengo.com</span>
-          <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=19073023" target="_blank" ga_event="click_about"><img src="//s3.pstatp.com/toutiao/static/img/gongan.d0289dc.png">&nbsp;粤ICP备19073023号</a>
-        </div>
       </div>
     </div>
     
@@ -89,6 +89,9 @@ export default {
     overflow: hidden;
     .call-main-nav {
       height:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .call-main-content {
       display: block;
@@ -103,15 +106,17 @@ export default {
 
 .gov {
   padding: 10px;
-  &, &>a {
+  display: flex;
+  flex-direction: column;
+  &>a {
+    margin-bottom: 8px;
     display: flex;
     align-items: center;
-    justify-content: center;
     color:#999;
   }
-  
   span {
-    margin-right: 20px;
+    text-indent: 2em;
+    color: #999
   }
 }
 .fold-enter-active {

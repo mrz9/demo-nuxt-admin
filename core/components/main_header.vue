@@ -1,7 +1,7 @@
 <template>
   <el-row type="flex" class="header" :class="{'min-navbar':is_mini_menu}" align="middle">
     <a class="header-logo" href="#">
-      <span>kali ui</span>
+      <span>个人博客</span>
       <img src="~/assets/img/logo-white-min.svg" alt="">
     </a>
     <a href="javascript:;" @click="toggleMenu" class="header-item">

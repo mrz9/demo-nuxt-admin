@@ -4,6 +4,9 @@
 			<h3>加密</h3>
 			<el-row>
 				<el-form ref="form" :model="cryptoFrom" label-width="120px">
+          <el-form-item label="密钥">
+						<el-input type="text" v-model="cryptoFrom.key"></el-input>
+					</el-form-item>
 					<el-form-item label="加密/解密内容">
 						<el-input type="textarea" v-model="cryptoFrom.content" @input="cryptoFrom.result = ''"></el-input>
 					</el-form-item>
@@ -173,6 +176,7 @@
           ]
 				},
 				cryptoFrom: {
+          key: 'dc04fd1f9f07e12e42b5505c9f13d339',
 					content: '',
 					result: ''
 				}
@@ -210,13 +214,13 @@
         return isJPG && isLt2M;
 			},
 			getEncode(){
-				let result = this.$utils.crypto.encode(this.cryptoFrom.content,'dc04fd1f9f07e12e42b5505c9f13d339');
+				let result = this.$utils.crypto.encode(this.cryptoFrom.content, this.cryptoFrom.key);
 				if(result){
 					this.cryptoFrom.result = result
 				}
 			},
 			getDecode() {
-				let result = this.$utils.crypto.decode(this.cryptoFrom.content,'dc04fd1f9f07e12e42b5505c9f13d339');
+				let result = this.$utils.crypto.decode(this.cryptoFrom.content, this.cryptoFrom.key);
 				if(result){
 					this.cryptoFrom.result = result
 				}
